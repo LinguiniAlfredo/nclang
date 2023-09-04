@@ -48,7 +48,7 @@
 		"constants": {
 			"patterns": [{
 				"name": "constant.numeric",
-				"match": "\\b([\\d]+)\\b"
+				"match": "\\b(\\d+\\.?\\d*)\\b"
 			},
 			{
 				"name": "constant.language",
@@ -119,7 +119,7 @@
 	 		}
 		},
 		"cnclibrarymethods":{
-			"match":  "(\\(|=\\s|)([a-zA-z0-9*]+?(?=\\.))(.)(.+?(?=\\())",
+			"match":  "([^xX|yY|zZ|aA|bB|cC]\\(|=\\s|)([a-zA-z0-9*]+?(?=\\.))(.)(.+?(?=\\())",
 			"captures" : {
 				"2" : { "name" : "entity.name.type.nc64" },
 				"4" : { "name" : "entity.name.function.nc64" }
