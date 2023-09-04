@@ -1,35 +1,38 @@
-# nclang README
+# NC64/ACNC32 Syntax Highlighting
 
-This is the README for your extension "nclang". After writing up a brief description, we recommend including the following sections.
+Adds syntax hightlighting for the NC64/ACNC32 language.
 
-## Features
+## Syntax Highlighting
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Full support for syntax highlighting using the <a href="https://github.com/MichaelDelfino/nclang">NCLang TextMate Bundle.</a>
 
-For example if there is an image subfolder under your extension project workspace:
+![Alt text](readme_images/image-14.png)
 
-\!\[feature X\]\(images/feature-x.png\)
+## Examples
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+### Functions
 
-## Requirements
+![Alt text](readme_images/image-6.png)
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+### Variables / Datatypes
 
-## Extension Settings
+![Alt text](readme_images/image-1.png)
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+### Logic
 
-For example:
+![Alt text](readme_images/image-10.png)
 
-This extension contributes the following settings:
+### Callsubs / CNCLibraryMethods
 
-- `myExtension.enable`: Enable/disable this extension.
-- `myExtension.thing`: Set to `blah` to do something.
+![Alt text](readme_images/image-9.png)
 
-## Known Issues
+### Machine Codes / Tables
 
-Known issues are...
+![Alt text](readme_images/image-13.png)
+
+## Semantics / Code Completion
+
+Available in future versions
 
 ## Release Notes
 
