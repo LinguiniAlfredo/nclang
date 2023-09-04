@@ -76,7 +76,7 @@
 				},
 				{
 					"name": "constant.character.nc64",
-					"match": "\\%.+?[a-zA-Z]"
+					"match": "\\%.+?[a-zA-Z^\\s]"
 				}
 			]
 		},
