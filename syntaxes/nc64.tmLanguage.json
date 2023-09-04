@@ -73,6 +73,10 @@
 				{
 					"name": "constant.character.escape.nc64",
 					"match": "\\\\."
+				},
+				{
+					"name": "constant.character.nc64",
+					"match": "\\%.+?[a-zA-Z]"
 				}
 			]
 		},
