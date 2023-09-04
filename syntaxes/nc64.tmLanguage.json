@@ -153,13 +153,13 @@
 				},
 				{
 					"name": "machmoves_simple",
-					"match": " ([xX|yY|zZ|aA|bB|cC|wW|uU][0-9]+)",
+					"match": "(\\s|^)([xX|yY|zZ|aA|bB|cC|wW|uU][\\d+\\.?\\d*]+)",
 						"captures" : {
-							"1" : { "name" : "storage.type.nc64" }
+							"2" : { "name" : "storage.type.nc64" }
 						}
 				},
 				{
-					"name": "machmoves",
+					"name": "machmoves_params",
 					"match":"(\\s|^)([xX|yY|zZ|aA|bB|cC|uU|wW]?(?=\\())",
 					"captures" : {
 				 		"2" : { "name" : "storage.type.nc64" }
