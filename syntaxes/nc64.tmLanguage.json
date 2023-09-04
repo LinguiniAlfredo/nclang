@@ -78,7 +78,7 @@
 		},
 		"operators": {
 			"name" : "keyword.operator.nc64",
-			"match": "(=|>|<|<>|>=|<=|\\b(or|and)\\b)"
+			"match": "(=|>|<|<>|>=|<=|-|\\+|\\*|/|\\b(or|and)\\b)"
 		},
 		"entities": {
 			"patterns":[
