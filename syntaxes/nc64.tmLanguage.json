@@ -124,7 +124,7 @@
 			}
 		},
 		"callsubs": {
-		 	"match":"(')(.*?)(:)(.*?)(')",
+		 	"match":"(')(.*?)(:)(.*?)(')(\\()",
 			"captures" : {
 				 "1" : { "name" : "keyword.control.nc64" },
 				 "2" : { "name" : "entity.name.type.nc64" },
