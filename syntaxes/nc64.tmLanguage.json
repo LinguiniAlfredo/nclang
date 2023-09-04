@@ -153,14 +153,14 @@
 				},
 				{
 					"name": "machmoves_simple",
-					"match": " ([xX|yY|zZ|aA|bB|cC][0-9]+)",
+					"match": " ([xX|yY|zZ|aA|bB|cC|wW|uU][0-9]+)",
 						"captures" : {
 							"1" : { "name" : "storage.type.nc64" }
 						}
 				},
 				{
 					"name": "machmoves",
-					"match":"(\\s|^)([xX|yY|zZ|aA|bB|cC]?(?=\\())",
+					"match":"(\\s|^)([xX|yY|zZ|aA|bB|cC|uU|wW]?(?=\\())",
 					"captures" : {
 				 		"2" : { "name" : "storage.type.nc64" }
 	 				}
