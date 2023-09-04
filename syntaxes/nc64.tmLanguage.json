@@ -1,0 +1,170 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "NC64",
+
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#callsubs"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#entities"
+		},
+		{
+			"include": "#storage"
+		},
+		{
+			"include": "#cnclibrarymethods"
+		},
+		{
+			"include": "#localvars"
+		},
+		{
+			"include": "#machinecodes"
+		},
+		{
+			"include": "#mdts"
+		},
+		{
+			"include": "#"
+		}
+	],
+
+	"repository": {
+		"constants": {
+			"patterns": [{
+				"name": "constant.numeric",
+				"match": "\\b([\\d]+)\\b"
+			},
+			{
+				"name": "constant.language",
+				"match": "\\b(true|false)\\b"
+			}]
+		},
+		"comments": {
+			"name": "comment.line.nc64",
+			"match": ";.*$"
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.nc64",
+				"match": "\\b(if|then|else|while|for|end|return|callsub|const)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.nc64",
+			"begin": "(\"|\\')",
+			"end": "(\"|\\')",
+			"patterns": [
+				{
+					"name": "constant.character.escape.nc64",
+					"match": "\\\\."
+				}
+			]
+		},
+		"entities": {
+			"patterns":[
+				{
+					"name": "entity.name.function.nc64",
+					"match":"(%.+?(?=\\())",
+					"captures" : {
+						"1" : { "name" : "entity.name.function.nc64" }
+				 
+					}
+				},
+				{
+					"name": "datatypes",
+					"match": "(:)(.+?(?=(\n|,|=|\\))))",
+					"captures" : {
+						"2" : { "name" : "entity.other.attribute-name.nc64" }
+					}
+				}
+			]
+		},
+		"storage": {
+			"name": "storage.type.nc64",
+			"match": "\\b(var)\\b"
+		},
+		"variables": {
+			"match": "(\\(|,\\s|var\\s)(.+?(?=(:)))",
+			"captures" : {
+				"2" : { "name" : "variable.nc64" }
+			}
+		},
+		"callsubs": {
+		 	"match":"(')(.*?)(:)(.*?)(')",
+			"captures" : {
+				 "1" : { "name" : "keyword.control.nc64" },
+				 "2" : { "name" : "entity.name.type.nc64" },
+				 "4" : { "name" : "entity.name.function.nc64" },
+				 "5" : { "name" : "keyword.control.nc64" }
+	 		}
+		},
+		"cnclibrarymethods":{
+			"match":  "(\\(|=\\s|)([a-zA-z0-9*]+?(?=\\.))(.)(.+?(?=\\())",
+			"captures" : {
+				"2" : { "name" : "entity.name.type.nc64" },
+				"4" : { "name" : "entity.name.function.nc64" }
+			}
+		},
+		"localvars": {
+
+		},
+		"machinecodes": {
+			"patterns":[
+				{
+					"name": "gcodes",
+					"match": "([mM][0-9]+)",
+						"captures" : {
+							"1" : { "name" : "variable.nc64" }
+						}
+				},
+				{
+					"name": "mcodes",
+					"match": "([gG][0-9]+)",
+						"captures" : {
+							"1" : { "name" : "variable.nc64" }
+						}
+				},
+				{
+					"name": "fcodes",
+					"match": "([fF][0-9]+)",
+						"captures" : {
+							"1" : { "name" : "variable.nc64" }
+						}
+				},
+				{
+					"name": "machmoves",
+					"match":"(\\s|^)([xX|yY|zZ|aA|bB|cC]?(?=\\())",
+					"captures" : {
+				 		"2" : { "name" : "variable.nc64" }
+	 				}
+				}
+			]
+		},
+		"mdts": {
+			"patterns": [
+			{
+				"match":"([a-zA-z0-9*]+?(?=\\[))",
+				"captures" : {
+				 	"1" : { "name" : "entity.name.function" }
+	 			}
+			}
+			]
+
+		}
+
+	},
+	"scopeName": "source.gcode"
+}

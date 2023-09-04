@@ -1,0 +1,25 @@
+{
+  "name": "nclang",
+  "displayName": "NCLang",
+  "description": "Syntax highlighting for NC64/ACNC32 language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "nc64",
+      "aliases": ["NC64", "nc64"],
+      "extensions": ["gcode"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "nc64",
+      "scopeName": "source.gcode",
+      "path": "./syntaxes/nc64.tmLanguage.json"
+    }]
+  }
+}
