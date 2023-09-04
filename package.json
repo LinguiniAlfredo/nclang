@@ -15,11 +15,26 @@
       "aliases": ["NC64", "nc64"],
       "extensions": ["gcode"],
       "configuration": "./language-configuration.json"
+    },
+    {
+      "id": "nc64-markdown-injection"
     }],
     "grammars": [{
       "language": "nc64",
       "scopeName": "source.gcode",
       "path": "./syntaxes/nc64.tmLanguage.json"
-    }]
+    },
+    {
+      "language": "nc64-markdown-injection",
+      "scopeName": "markdown.nc64.codeblock",
+      "path": "./syntaxes/nc64-markdown-injection.tmLanguage.json",
+      "injectTo": [
+          "text.html.markdown"
+      ],
+      "embeddedLanguages": {
+          "meta.embedded.block.nc64": "nc64"
+      }
+  }]
   }
+  
 }

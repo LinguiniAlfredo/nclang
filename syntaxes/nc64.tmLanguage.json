@@ -19,6 +19,9 @@
 			"include": "#strings"
 		},
 		{
+			"include": "#operators"
+		},
+		{
 			"include": "#entities"
 		},
 		{
@@ -59,7 +62,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.nc64",
-				"match": "\\b(if|then|else|while|for|end|return|callsub|const)\\b"
+				"match": "\\b(if|then|else|while|for|to|do|end|return|callsub|const)\\b"
 			}]
 		},
 		"strings": {
@@ -72,6 +75,10 @@
 					"match": "\\\\."
 				}
 			]
+		},
+		"operators": {
+			"name" : "entity.name.function.nc64",
+			"match": "\\b(=|>|<|<>|>=|<=)\\b"
 		},
 		"entities": {
 			"patterns":[
@@ -145,10 +152,17 @@
 						}
 				},
 				{
+					"name": "machmoves_simple",
+					"match": " ([xX|yY|zZ|aA|bB|cC][0-9]+)",
+						"captures" : {
+							"1" : { "name" : "storage.type.nc64" }
+						}
+				},
+				{
 					"name": "machmoves",
 					"match":"(\\s|^)([xX|yY|zZ|aA|bB|cC]?(?=\\())",
 					"captures" : {
-				 		"2" : { "name" : "variable.nc64" }
+				 		"2" : { "name" : "storage.type.nc64" }
 	 				}
 				}
 			]
