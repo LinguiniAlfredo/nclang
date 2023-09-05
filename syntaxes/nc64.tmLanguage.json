@@ -108,6 +108,7 @@
 					"name": "datatypes",
 					"match": "(:)(.+?(?=(\n|,|=|\\))))",
 					"captures" : {
+						"1" : { "name" : "keyword.operator.nc64"},
 						"2" : { "name" : "entity.other.attribute-name.nc64" }
 					}
 				}
@@ -128,6 +129,7 @@
 			"captures" : {
 				 "1" : { "name" : "keyword.control.nc64" },
 				 "2" : { "name" : "entity.name.type.nc64" },
+				 "3" : { "name" : "keyword.operator.nc64"},
 				 "4" : { "name" : "entity.name.function.nc64" },
 				 "5" : { "name" : "keyword.control.nc64" }
 	 		}

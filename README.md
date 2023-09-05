@@ -6,29 +6,27 @@ Adds syntax hightlighting for the NC64/ACNC32 language.
 
 Full support for syntax highlighting using the <a href="https://github.com/MichaelDelfino/nclang">NCLang TextMate Bundle.</a>
 
-![Alt text](readme_images/image-14.png)
-
 ## Examples
 
 ### Functions
 
-![Alt text](readme_images/image-6.png)
+![Alt text](readme_images/image-3.png)
 
 ### Variables / Datatypes
 
-![Alt text](readme_images/image-1.png)
+![Alt text](readme_images/image-6.png)
 
 ### Logic
 
-![Alt text](readme_images/image-10.png)
+![Alt text](readme_images/image-4.png)
 
 ### Callsubs / CNCLibraryMethods
 
-![Alt text](readme_images/image-9.png)
+![Alt text](readme_images/image-1.png) ![Alt text](readme_images/image-2.png)
 
-### Machine Codes / Tables
+### Machine Codes
 
-![Alt text](readme_images/image-13.png)
+![Alt text](readme_images/image.png)
 
 ## Semantics / Code Completion
 
