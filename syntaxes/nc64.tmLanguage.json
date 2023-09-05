@@ -169,7 +169,7 @@
 				},
 				{
 					"name": "machmoves_simple",
-					"match": "(\\s|^)([xX|yY|zZ|aA|bB|cC|wW|uU][\\d+\\.?\\d*]+)",
+					"match": "(\\s|^)([xX|yY|zZ|aA|bB|cC|wW|uU][-\\d+\\.?\\d*]+)",
 						"captures" : {
 							"2" : { "name" : "storage.type.nc64" }
 						}
