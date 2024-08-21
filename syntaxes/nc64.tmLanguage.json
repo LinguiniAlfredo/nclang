@@ -52,7 +52,7 @@
 			},
 			{
 				"name": "constant.language",
-				"match": "\\b(true|false)\\b"
+				"match": "(?i)\\b(true|false)\\b"
 			}]
 		},
 		"comments": {
@@ -62,7 +62,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.nc64",
-				"match": "\\b(if|then|else|while|for|to|do|end|return|callsub|const)\\b"
+				"match": "(?i)\\b(if|then|else|while|for|to|do|end|return|callsub|const|return)\\b"
 			}]
 		},
 		"strings": {
@@ -147,15 +147,15 @@
 		"machinecodes": {
 			"patterns":[
 				{
-					"name": "gcodes",
-					"match": "([mM][0-9]+)",
+					"name": "mcodes",
+					"match": "((\\s|^)[mM][0-9]+)",
 						"captures" : {
 							"1" : { "name" : "variable.nc64" }
 						}
 				},
 				{
-					"name": "mcodes",
-					"match": "([gG][0-9]+)",
+					"name": "gcodes",
+					"match": "((\\s|^)[gG][0-9]+)",
 						"captures" : {
 							"1" : { "name" : "variable.nc64" }
 						}
