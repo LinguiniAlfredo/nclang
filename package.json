@@ -3,7 +3,7 @@
   "displayName": "NCLang",
   "publisher": "LinguiniAlfredo",
   "description": "Syntax highlighting for NC64/ACNC32 language",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/LinguiniAlfredo/nclang"
@@ -18,7 +18,7 @@
     "languages": [{
       "id": "nc64",
       "aliases": ["NC64", "nc64"],
-      "extensions": ["gcode", "txt"],
+      "extensions": ["gcode"],
       "configuration": "./language-configuration.json"
     }
 ],
