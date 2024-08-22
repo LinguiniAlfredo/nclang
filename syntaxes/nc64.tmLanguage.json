@@ -76,7 +76,7 @@
 				},
 				{
 					"name": "constant.character.nc64",
-					"match": "\\%.+?[a-zA-Z^\\s]"
+					"match": "(\\%\\.[0-9][aA-zZ])|(\\%.)"
 				}
 			]
 		},
@@ -116,7 +116,7 @@
 		},
 		"storage": {
 			"name": "storage.type.nc64",
-			"match": "\\b(var)\\b"
+			"match": "(?i)\\b(var)\\b"
 		},
 		"variables": {
 			"match": "(\\(|,\\s|var\\s)(.+?(?=(:)))",
